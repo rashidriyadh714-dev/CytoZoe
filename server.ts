@@ -524,4 +524,17 @@ async function startServer() {
   });
 }
 
-startServer();
+process.on("uncaughtException", (err) => {
+  console.error("FATAL: Uncaught exception in CytoZoe server:", err);
+  process.exit(1);
+});
+
+process.on("unhandledRejection", (reason) => {
+  console.error("FATAL: Unhandled rejection in CytoZoe server:", reason);
+  process.exit(1);
+});
+
+startServer().catch((err) => {
+  console.error("FATAL: Failed to start CytoZoe server:", err);
+  process.exit(1);
+});
