@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+build/
+coverage/
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Runtime SQLite databases
+runtime/*.db
+runtime/*.db-wal
+runtime/*.db-shm
+
+# AI Studio artifacts
+.aistudio/
+metadata.json
+
+# Logs & System
+*.log
+.DS_Store
+._*

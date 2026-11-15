@@ -1,0 +1,11 @@
+{
+  "fetch_key": "radlab-dostel1-2022-03-01",
+  "dataset_id": "RADLAB-DOSTEL1-2022-03-01",
+  "file_name": "radlab_DosTel1_2022-03-01.csv",
+  "download_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-03-01&timestamp%3C2022-03-02&absorbed_dose_rate&format=csv",
+  "fetched_at": "2026-11-15T04:41:56Z",
+  "bytes": 52555,
+  "sha256": "d3f64e7f483c3ae2f08bb5e6633bae5091e661a988c434205ce6bb78c050f7e1",
+  "matches_pinned_sha256": true,
+  "header": "timestamp,instrument_id,absorbed_dose_rate"
+}

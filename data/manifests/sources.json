@@ -1,0 +1,39 @@
+{
+  "manifest_version": "1.0",
+  "note": "Pinned NASA source definitions. Only bytes whose SHA-256 equals expected_sha256 or is listed in accepted_sha256 (a newer NASA version added here after review) can be imported as NASA data. Raw files are fetched once during setup by scripts/fetch_data.py and are never fetched by the running app. A hash difference is not automatic proof of corruption: inspect the change and update this manifest deliberately.",
+  "datasets": [
+    {
+      "id": "OSD-575-CMP",
+      "fetch_key": "osd575-cmp",
+      "kind": "HEALTH_CMP",
+      "title": "Inspiration4 (SpaceX) crew serum Comprehensive Metabolic Panel",
+      "provider": "NASA Open Science Data Repository (OSDR)",
+      "study_id": "OSD-575",
+      "study_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-575",
+      "download_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Comprehensive_Metabolic_Panel_CMP_TRANSFORMED.csv",
+      "file_name": "LSDS-8_Comprehensive_Metabolic_Panel_CMP_TRANSFORMED.csv",
+      "expected_sha256": "5eb1e7f025dd8443a9e70111e62bc32afae3432753024489c5c013e401d709d9",
+      "expected_bytes": 8506,
+      "accepted_sha256": [],
+      "license_note": "OSDR study page lists CC0-1.0. Citation and original metadata preserved regardless.",
+      "citation": "NASA Open Science Data Repository, OSD-575: SpaceX Inspiration4 Comprehensive Metabolic Panel (LSDS-8). https://osdr.nasa.gov/bio/repo/data/studies/OSD-575"
+    },
+    {
+      "id": "RADLAB-DOSTEL1-2022-03-01",
+      "fetch_key": "radlab-dostel1-2022-03-01",
+      "kind": "ENV_RADIATION",
+      "title": "ISS Columbus DosTel1 absorbed dose rate, 1 March 2022",
+      "provider": "NASA OSDR RadLab",
+      "study_id": "RadLab DosTel1",
+      "study_url": "https://visualization.osdr.nasa.gov/radlab/gui/knowledgebase/DosTel1",
+      "download_url": "https://visualization.osdr.nasa.gov/radlab/api/?instrument_id=DosTel1&timestamp%3E=2022-03-01&timestamp%3C2022-03-02&absorbed_dose_rate&format=csv",
+      "documentation_url": "https://visualization.osdr.nasa.gov/radlab/gui/data-api/",
+      "file_name": "radlab_DosTel1_2022-03-01.csv",
+      "expected_sha256": "d3f64e7f483c3ae2f08bb5e6633bae5091e661a988c434205ce6bb78c050f7e1",
+      "expected_bytes": 52555,
+      "accepted_sha256": [],
+      "license_note": "Publicly accessible through the NASA RadLab API. Redistribution terms not verified; raw file is not committed to Git — fetch it with scripts/fetch_data.py.",
+      "citation": "NASA OSDR RadLab, DosTel1 absorbed_dose_rate export for 2022-03-01. https://visualization.osdr.nasa.gov/radlab/gui/data-api/"
+    }
+  ]
+}
