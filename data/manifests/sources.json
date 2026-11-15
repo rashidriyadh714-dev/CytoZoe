@@ -14,7 +14,9 @@
       "file_name": "LSDS-8_Comprehensive_Metabolic_Panel_CMP_TRANSFORMED.csv",
       "expected_sha256": "5eb1e7f025dd8443a9e70111e62bc32afae3432753024489c5c013e401d709d9",
       "expected_bytes": 8506,
-      "accepted_sha256": [],
+      "accepted_sha256": [
+        "1f8c36196c4f3e2b927668bc01cb0b227d9281797df4a003d579e349abc47320"
+      ],
       "license_note": "OSDR study page lists CC0-1.0. Citation and original metadata preserved regardless.",
       "citation": "NASA Open Science Data Repository, OSD-575: SpaceX Inspiration4 Comprehensive Metabolic Panel (LSDS-8). https://osdr.nasa.gov/bio/repo/data/studies/OSD-575"
     },
