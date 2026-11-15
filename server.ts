@@ -10,7 +10,7 @@ import * as services from "./src/server/services";
 import * as quality from "./src/engines/quality";
 import * as explainEngine from "./src/engines/explain";
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 /* ---------- Live SSE Hub (/api/events) ---------- */
 const sseClients = new Set<Response>();
@@ -505,7 +505,8 @@ async function startServer() {
 
   /* ---------- Vite Middleware or Static Serving ---------- */
   const distPath = path.resolve(process.cwd(), "dist");
-  if (process.env.NODE_ENV === "production" && fs.existsSync(path.join(distPath, "index.html"))) {
+  const hasDist = fs.existsSync(path.join(distPath, "index.html"));
+  if (hasDist && process.env.NODE_ENV !== "development") {
     app.use(express.static(distPath));
     app.get("*", (_req, res) => {
       res.sendFile(path.join(distPath, "index.html"));
